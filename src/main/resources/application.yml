@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Gestion_Stock
+    username: postgres
+    password: khaled
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop #qu'est ce qu'on va faire a la base de donnee au demmarrage create ou create-drop ou update
+    show-sql: true #lorsqu'on on envoie une requete http est ce que on veut afficher larequete sql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    database: postgresql
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8081
+
+flickr:
+  apiKey: 4e285a70b502b55acbab7e5bf6a90b52
+  apiSecret: 998dad930ab1d704
+  appKey: 72157720873891471-18519dcb88dc4edd
+  appSecret: 5890b341179b8a33
